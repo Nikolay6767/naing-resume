@@ -1,0 +1,552 @@
+/*
+ * Global styles and colour palette
+ *
+ * This stylesheet defines the look and feel of the resume website for
+ * Naing Lin Oo. A coherent palette and responsive grid system ensure the
+ * site looks great on both mobile and desktop devices. To adjust the
+ * colour scheme, modify the variables in the :root selector below.
+ */
+
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #0a2647;
+  --light-color: #f2f7fc;
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background: var(--light-color);
+  line-height: 1.6;
+  /* Prevent horizontal overflow on small devices */
+  overflow-x: hidden;
+}
+
+/* Ensure main content starts below the fixed navigation */
+main {
+  padding-top: 80px;
+}
+
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10, 38, 71, 0.92);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 1.5rem;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* Active link indicator */
+.navbar a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Hamburger menu for smaller screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  margin: 4px 0;
+  transition: all 0.4s ease;
+}
+
+/* Toggle class for hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .navbar ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 38, 71, 0.95);
+    transition: left 0.4s ease;
+  }
+  .navbar ul.active {
+    left: 0;
+  }
+  .navbar li {
+    margin: 1.5rem 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url("assets/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 38, 71, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  color: var(--white);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text .subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  font-weight: 500;
+}
+
+.contact-info p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info .icon {
+  margin-right: 0.4rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0f52ba;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 280px;
+}
+
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+}
+
+/* Section styling */
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* offset internal anchors by nav height */
+  scroll-margin-top: 90px;
+}
+
+section h2 {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50px;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+/* Alternate section backgrounds */
+main section:nth-of-type(even) {
+  background: var(--light-color);
+}
+
+/* About section */
+.about-section p {
+  font-size: 1.05rem;
+  max-width: 900px;
+}
+
+/* Core competencies grid */
+.core-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.core-item {
+  background: var(--white);
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -12px;
+  right: auto;
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.timeline-item .date {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.timeline-item p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.timeline-item ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.timeline-item ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for timeline on small screens */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    left: 0 !important;
+    margin-bottom: 2rem;
+  }
+  .timeline-item::before {
+    left: 10px !important;
+    right: auto;
+  }
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.skill-category ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.skill-category li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Education section */
+.education-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.education-item h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.education-item span {
+  display: block;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 0.4rem;
+}
+
+.education-item .date-range {
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+/* Certifications & Projects list */
+.cert-list,
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.cert-item,
+.project-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.cert-item h3,
+.project-item h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.project-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-item li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Contact section */
+.contact-section {
+  /* Use important to override the alternating section background */
+  background: var(--secondary-color) !important;
+  color: var(--white);
+  padding: 4rem 2rem;
+}
+
+.contact-section h2::after {
+  background: var(--white);
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Style links inside the contact block for better contrast */
+.contact-block a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0f52ba;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
