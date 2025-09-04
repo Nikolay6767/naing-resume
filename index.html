@@ -1,340 +1,226 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naing Lin Oo — Professional Resume</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <header>
-      <nav class="navbar">
-        <!-- Site logo / name on the left -->
-        <a href="#" class="logo">Naing Lin Oo</a>
-        <!-- Primary navigation links -->
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#core">Core Competencies</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- Hamburger menu for small screens -->
-        <div class="hamburger" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-      <!-- Hero section with portrait and summary highlights -->
-      <section class="hero">
-        <div class="hero-content reveal">
-          <div class="hero-text">
-            <h1>Naing Lin Oo</h1>
-            <p class="subtitle">IT Manager | Network &amp; Systems Architect | IT Project Lead</p>
-            <div class="contact-info">
-              <p><span class="icon">📍</span> Yangon, Myanmar</p>
-              <p><span class="icon">📞</span> +95 9776767675</p>
-              <p><span class="icon">✉️</span> unainglinoo@gmail.com</p>
-            </div>
-            <a href="#contact" class="btn-primary">Get in Touch</a>
-          </div>
-          <div class="hero-image">
-            <img
-              src="assets/images/photo.jpg"
-              alt="Portrait of Naing Lin Oo in a suit and tie"
-            />
-          </div>
-        </div>
-      </section>
-    </header>
-    
-    <!-- Main content sections -->
-    <main>
-      <!-- Professional Summary -->
-      <section id="about" class="about-section reveal">
-        <h2>Professional Summary</h2>
-        <p>
-          Accomplished and strategic IT Manager with over 10 years of experience
-          leading comprehensive network infrastructure, IT operations and
-          cross‑functional project delivery. Proven expertise in designing and
-          implementing secure, scalable enterprise solutions, managing full
-          project lifecycles from conception to deployment and optimizing IT
-          service delivery to enhance user productivity and satisfaction. A
-          decisive leader adept at aligning technology initiatives with core
-          business objectives to drive operational efficiency, reduce costs and
-          support sustained organizational growth.
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Naing Lin Oo — IT Manager & Network Architect</title>
+  <meta name="description" content="IT Manager | Network & Systems Architect | IT Project Lead in Yangon, Myanmar." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar container" id="top">
+    <div class="brand">
+      <div class="avatar">NL</div>
+      <div>
+        <h1 class="name">Naing Lin Oo</h1>
+        <p class="role">IT Manager • Network &amp; Systems Architect • IT Project Lead</p>
+        <p class="muted">Yangon, Myanmar • <a href="tel:+959776767675">+95 9776767675</a> • <a href="mailto:unainglinoo@gmail.com">unainglinoo@gmail.com</a></p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certs">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle" class="chip">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero card">
+      <div>
+        <h2>Strategic IT leadership, secure networks, reliable delivery</h2>
+        <p class="muted">
+          Over 10 years leading network infrastructure, IT operations and cross-functional projects with 99.9% uptime and measurable efficiency gains.
+          <span class="mm">လုပ်ငန်းအနိုင်ကျင့် IT စနစ်တွေကို အာမခံထားတဲ့ စီမံခန့်ခွဲမှုနဲ့ လေ့လာဖော်ထုတ်ပြီး မြန်မာဈေးကွက်အတွက် အသုံးချနိုင်တဲ့ ဖြေရှင်းချက်တွေ တည်ဆောက်ပေးပါတယ်။</span>
         </p>
-      </section>
-
-      <!-- Core Competencies -->
-      <section id="core" class="core-section reveal">
-        <h2>Core Competencies</h2>
-        <div class="core-grid">
-          <div class="core-item">Strategic IT Leadership &amp; Planning</div>
-          <div class="core-item">Network Architecture &amp; Administration</div>
-          <div class="core-item">End‑to‑End Project Management (PMO)</div>
-          <div class="core-item">IT Service Delivery &amp; Support Optimization</div>
-          <div class="core-item">System Security &amp; Regulatory Compliance</div>
-          <div class="core-item">Budget Planning &amp; Vendor Management</div>
-          <div class="core-item">Stakeholder Engagement &amp; Communication</div>
-          <div class="core-item">Team Leadership &amp; Technical Mentoring</div>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Hire me</a>
+          <a class="btn" href="resume.pdf">Download CV</a>
+          <a class="btn ghost" href="#projects">See projects</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Professional Experience Timeline -->
-      <section id="experience" class="experience-section reveal">
-        <h2>Professional Experience</h2>
-        <div class="timeline">
-          <!-- IT Manager position -->
-          <div class="timeline-item">
-            <h3>IT Manager | Htoo Group of Company</h3>
-            <span class="date">Feb 2016 – Present</span>
-            <p>Yangon &amp; Nay Pyi Taw, Myanmar</p>
-            <ul>
-              <li>
-                Orchestrated strategic planning, administration and
-                continuous improvement of the corporate network across 3+ offices
-                ensuring 99.9% uptime, robust security and optimal performance.
-              </li>
-              <li>
-                Managed complete lifecycles of IT projects from initial scoping
-                to final implementation, consistently delivering on time and within
-                budget and improving operational workflows by 15%.
-              </li>
-              <li>
-                Led and mentored a team of IT support specialists; established
-                and enforced service‑level agreements, enhancing support quality
-                and reducing average ticket resolution times by 25%.
-              </li>
-              <li>
-                Directed evaluation, implementation and management of
-                critical IT infrastructure including server virtualization,
-                advanced security protocols and enterprise communication tools.
-              </li>
-            </ul>
-          </div>
+    <!-- About -->
+    <section id="about" class="card">
+      <h3>About</h3>
+      <p>
+        Accomplished IT Manager experienced in secure, scalable enterprise solutions— from design to deployment— aligning technology initiatives with business outcomes, reducing costs and improving service quality.
+      </p>
+      <ul class="highlights">
+        <li>99.9% network uptime across 3+ offices</li>
+        <li>15% workflow improvement via on-time, on-budget project delivery</li>
+        <li>25% faster ticket resolution through SLA discipline & mentoring</li>
+      </ul>
+      <p class="muted">
+        LinkedIn: <a target="_blank" href="https://linkedin.com/in/nlo579145">linkedin.com/in/nlo579145</a>
+        &nbsp;•&nbsp; Portfolio: <a target="_blank" href="https://yourwebsite.com">yourwebsite.com</a>
+      </p>
+    </section>
 
-          <!-- Graphic Designer position -->
-          <div class="timeline-item">
-            <h3>Graphic Designer | Htoo Group of Company</h3>
-            <span class="date">Oct 2014 – Jan 2016</span>
-            <p>Yangon, Myanmar</p>
-            <ul>
-              <li>
-                Developed high‑impact visual designs and marketing collateral to
-                effectively support company branding and strategic communication
-                initiatives.
-              </li>
-            </ul>
-          </div>
-
-          <!-- Computer Officer position -->
-          <div class="timeline-item">
-            <h3>Computer Officer | Myanmar Thiha Group of Company</h3>
-            <span class="date">Dec 2013 – Nov 2014</span>
-            <p>Yangon, Myanmar</p>
-            <ul>
-              <li>
-                Controlled, maintained and optimized all office network
-                infrastructure ensuring reliable connectivity and unwavering data
-                integrity for 200+ users.
-              </li>
-              <li>
-                Managed critical data operations including centralized storage
-                solutions, automated backup systems and stringent access control
-                policies.
-              </li>
-            </ul>
-          </div>
-
-          <!-- Service Engineer position -->
-          <div class="timeline-item">
-            <h3>Service Engineer | CyberTrade Computer</h3>
-            <span class="date">Oct 2012 – Dec 2013</span>
-            <p>Yangon, Myanmar</p>
-            <ul>
-              <li>
-                Delivered expert hardware repair and network solution
-                engineering services for a diverse client portfolio, achieving a
-                95% customer satisfaction rating.
-              </li>
-            </ul>
+    <!-- Skills -->
+    <section id="skills" class="card">
+      <h3>Technical Skills</h3>
+      <div class="grid-3">
+        <div>
+          <h4>Operating Systems</h4>
+          <div class="tags">
+            <span class="tag">Windows 10/11</span><span class="tag">Windows Server 2012–2022</span>
+            <span class="tag">macOS</span><span class="tag">Linux (Ubuntu/CentOS)</span><span class="tag">iOS/Android</span>
           </div>
         </div>
-      </section>
-
-      <!-- Technical Skills -->
-      <section id="skills" class="skills-section reveal">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Operating Systems</h3>
-            <ul>
-              <li>Windows 10/11, Windows Server 2012/2016/2019/2022</li>
-              <li>macOS, Linux (Ubuntu, CentOS)</li>
-              <li>iOS &amp; Android</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Networking &amp; Connectivity</h3>
-            <ul>
-              <li>TCP/IP, DNS &amp; DHCP</li>
-              <li>VPN, Wi‑Fi (WPA2/WPA3), Routers, Switches &amp; WAPs</li>
-              <li>Subnetting &amp; network segmentation</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Hardware &amp; Support</h3>
-            <ul>
-              <li>Desktop/Laptop repair &amp; peripheral troubleshooting</li>
-              <li>Hardware diagnostics &amp; performance monitoring</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Software &amp; Cloud</h3>
-            <ul>
-              <li>Microsoft 365 Administration (Teams, SharePoint, OneDrive)</li>
-              <li>ERP/CRM support</li>
-              <li>Email protocols (SMTP, IMAP, POP3)</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Security</h3>
-            <ul>
-              <li>Active Directory &amp; Azure AD (Entra ID)</li>
-              <li>Group Policy, MFA &amp; BitLocker</li>
-              <li>Firewalls &amp; endpoint security best practices</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>IT Management &amp; Tools</h3>
-            <ul>
-              <li>ITIL foundations &amp; service desk ticketing (ServiceNow,
-                Jira, Zendesk)</li>
-              <li>Remote support (TeamViewer, AnyDesk, BeyondTrust)</li>
-              <li>Backup solutions (Veeam, Acronis)</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Programming &amp; Web</h3>
-            <ul>
-              <li>Python &amp; JavaScript</li>
-              <li>Batch scripting</li>
-              <li>HTML, CSS, WordPress &amp; Joomla</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Systems &amp; Low‑Level Programming</h3>
-            <ul>
-              <li>Microcontroller systems &amp; DSP concepts</li>
-              <li>Cryptography principles &amp; C/C++</li>
-            </ul>
+        <div>
+          <h4>Networking</h4>
+          <div class="tags">
+            <span class="tag">TCP/IP</span><span class="tag">DNS/DHCP</span><span class="tag">VPN</span>
+            <span class="tag">Wi-Fi (WPA2/WPA3)</span><span class="tag">Routers/Switches</span><span class="tag">Subnetting</span>
           </div>
         </div>
-      </section>
-
-      <!-- Education -->
-      <section id="education" class="education-section reveal">
-        <h2>Education</h2>
-        <div class="education-item">
-          <h3>Bachelor of Engineering in Computer Engineering &amp; Informatics</h3>
-          <span>National Research University “Moscow Power Engineering Institute” (MPEI) — Moscow, Russia</span>
-          <p class="date-range">2007 – 2011</p>
-          <p>
-            Relevant specializations: Software development, computer network design and administration,
-            microprocessor/microcontroller systems, web‑application development, digital signal
-            processing, computer security &amp; cryptography.
-          </p>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certifications" class="certifications-section reveal">
-        <h2>Certifications</h2>
-        <div class="cert-list">
-          <div class="cert-item">
-            <h3>Cisco Certified Network Associate (CCNA)</h3>
-            <p>Issued by Cisco — Year: <em>To be filled</em></p>
-          </div>
-          <div class="cert-item">
-            <h3>ISO/ICE 27001:2022 Information Security Associate</h3>
-            <p>Issued in 2024</p>
-          </div>
-          <div class="cert-item">
-            <h3>Server Administration Class</h3>
-            <p>Completed in December 2024</p>
-          </div>
-          <div class="cert-item">
-            <h3>The Critical Role of IT Support Staff in Healthcare</h3>
-            <p>Completed in September 2025</p>
+        <div>
+          <h4>Security</h4>
+          <div class="tags">
+            <span class="tag">Active Directory / Azure AD</span><span class="tag">GPO</span><span class="tag">MFA</span>
+            <span class="tag">BitLocker</span><span class="tag">Endpoint Security</span>
           </div>
         </div>
-      </section>
 
-      <!-- Projects -->
-      <section id="projects" class="projects-section reveal">
-        <h2>Projects</h2>
-        <div class="project-list">
-          <div class="project-item">
-            <h3>Secure Enterprise VPN Deployment</h3>
-            <ul>
-              <li><strong>Technology Stack:</strong> Windows Server, OpenVPN/Pulse Secure, Active Directory</li>
-              <li>Led the design and implementation of a secure corporate VPN solution, improving
-                secure remote access for 100+ employees and supporting hybrid work models.</li>
+        <div>
+          <h4>Software & Cloud</h4>
+          <div class="tags">
+            <span class="tag">Microsoft 365 (Teams/SharePoint)</span><span class="tag">ERP/CRM</span>
+            <span class="tag">SMTP/IMAP/POP3</span>
+          </div>
+        </div>
+        <div>
+          <h4>IT Management & Tools</h4>
+          <div class="tags">
+            <span class="tag">ITIL</span><span class="tag">ServiceNow</span><span class="tag">Jira</span>
+            <span class="tag">Zendesk</span><span class="tag">TeamViewer/AnyDesk</span><span class="tag">Veeam/Acronis</span>
+          </div>
+        </div>
+        <div>
+          <h4>Programming & Web</h4>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Batch</span>
+            <span class="tag">HTML/CSS</span><span class="tag">WordPress</span><span class="tag">Joomla</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card">
+      <h3>Projects</h3>
+      <div class="grid-3">
+        <article class="project">
+          <h4>Secure Enterprise VPN Deployment</h4>
+          <p class="muted">Windows Server • OpenVPN/Pulse Secure • Active Directory</p>
+          <p>Designed & implemented secure remote access for 100+ staff to support hybrid work models.</p>
+        </article>
+        <article class="project">
+          <h4>Corporate Disaster Recovery Strategy</h4>
+          <p class="muted">Synology • VMware • Cloud Storage</p>
+          <p>Automated backup & DR plan, reducing potential downtime by ~90% for business continuity.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="card">
+      <h3>Experience</h3>
+      <ol class="timeline">
+        <li>
+          <div class="time">Feb 2016 — Present</div>
+          <div class="content">
+            <h4>IT Manager — Htoo Group of Company (Yangon & Nay Pyi Taw)</h4>
+            <ul class="bullets">
+              <li>Planned/administered corporate network across 3+ offices with 99.9% uptime.</li>
+              <li>Delivered full project lifecycles on time & budget; improved workflows by 15%.</li>
+              <li>Established SLAs & mentored IT support; reduced ticket resolution time by 25%.</li>
+              <li>Owned server virtualization, security protocols and enterprise comms tooling.</li>
             </ul>
           </div>
-          <div class="project-item">
-            <h3>Corporate Disaster Recovery Strategy</h3>
-            <ul>
-              <li><strong>Technology Stack:</strong> Synology, VMware, Cloud Storage</li>
-              <li>Architected and deployed a comprehensive automated data backup and disaster
-                recovery plan, reducing potential downtime by an estimated 90% and ensuring
-                business continuity.</li>
-            </ul>
+        </li>
+        <li>
+          <div class="time">Oct 2014 — Jan 2016</div>
+          <div class="content">
+            <h4>Graphic Designer — Htoo Group of Company (Yangon)</h4>
+            <p>Created brand-aligned visuals and marketing collateral.</p>
           </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="contact-section reveal">
-        <h2>Contact</h2>
-        <div class="contact-details">
-          <div class="contact-block">
-            <h3>Get in Touch</h3>
-            <p>
-              Feel free to reach out if you have questions, opportunities or would like
-              to discuss potential collaborations. I'm always open to connecting with
-              like‑minded professionals.
-            </p>
-            <p><strong>Email:</strong> <a href="mailto:unainglinoo@gmail.com" style="color: #fff; text-decoration: underline;">unainglinoo@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+959776767675" style="color: #fff; text-decoration: underline;">+95 9776767675</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nlo579145" target="_blank" style="color: #fff; text-decoration: underline;">linkedin.com/in/nlo579145</a></p>
-            <p><strong>Portfolio:</strong> <a href="https://yourwebsite.com" target="_blank" style="color: #fff; text-decoration: underline;">yourwebsite.com</a></p>
+        </li>
+        <li>
+          <div class="time">Dec 2013 — Nov 2014</div>
+          <div class="content">
+            <h4>Computer Officer — Myanmar Thiha Group of Company (Yangon)</h4>
+            <p>Maintained office network for 200+ users; centralized storage, backups, and access control.</p>
           </div>
-          <div class="contact-form">
-            <h3>Send a Message</h3>
-            <form id="contact-form">
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
+        </li>
+        <li>
+          <div class="time">Oct 2012 — Dec 2013</div>
+          <div class="content">
+            <h4>Service Engineer — CyberTrade Computer</h4>
+            <p>Hardware repair & network solutions; achieved ~95% customer satisfaction.</p>
           </div>
-        </div>
-      </section>
-    </main>
+        </li>
+      </ol>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Naing Lin Oo. All rights reserved.</p>
-    </footer>
+    <!-- Certifications -->
+    <section id="certs" class="card">
+      <h3>Certifications</h3>
+      <ul class="highlights">
+        <li>ISO/IEC 27001:2022 Information Security Associate (2024)</li>
+        <li>Server Administration Class (Dec 2024)</li>
+        <li>The Critical Role of IT Support Staff in Healthcare (Sep 2025)</li>
+        <li>CCNA (planned/placeholder)</li>
+      </ul>
+    </section>
 
-    <!-- Main script -->
-    <script src="script.js"></script>
-  </body>
+    <!-- Education -->
+    <section class="card">
+      <h3>Education</h3>
+      <p><strong>B.E. — Computer Engineering &amp; Informatics</strong><br>
+        National Research University “Moscow Power Engineering Institute” (MPEI), Moscow, Russia (2007–2011)</p>
+      <p class="muted">Specializations: Software Development, Network Design & Admin, Microprocessor/Microcontroller Systems, Web Apps, DSP, Security & Cryptography.</p>
+    </section>
+
+    <!-- Languages -->
+    <section class="card">
+      <h3>Languages</h3>
+      <div class="tags">
+        <span class="tag">Myanmar (Native)</span>
+        <span class="tag">English (Native-level)</span>
+        <span class="tag">Russian (Professional)</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <p>Open to leadership roles and complex network/IT projects in Myanmar & Thailand.</p>
+      <div class="contact-grid">
+        <a class="btn primary" href="mailto:unainglinoo@gmail.com">Email</a>
+        <a class="btn" href="https://linkedin.com/in/nlo579145" target="_blank">LinkedIn</a>
+        <a class="btn ghost" href="https://yourwebsite.com" target="_blank">Portfolio</a>
+        <a class="btn ghost" href="tel:+959776767675">Call</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="year"></span> Naing Lin Oo — Built with HTML/CSS/JS • <a href="#top">Back to top</a></small>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
